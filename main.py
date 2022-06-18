@@ -20,10 +20,10 @@ def crea_bases():
     db.session.commit()
 
 app.add_url_rule(
-        '/graphql'
-        view_func=GraphQLView.as_view(
-            'graphql',
-            schema=schema,
-            graphiql=True
+    '/graphql'
+    view_func=GraphQLView.as_view(
+        'graphql',
+        schema=schema,
+        graphiql=True
     )
 )
